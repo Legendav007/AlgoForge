@@ -1,113 +1,89 @@
----
+# AlgoForge
 
-AlgoForge 🔨
+Welcome to **AlgoForge**!  
+AlgoForge is a mentored open-source repository created as part of the **Winter of Open Source** initiative by our college coding club. It focuses on building a high-quality, well-structured collection of **algorithms and data structures** through community contributions.
 
-A Winter of Open Source Initiative
-
-📌 About
-
-AlgoForge is a mentored open-source repository created as part of Winter of Open Source, organized by GDG on Campus IIEST Shibpur and CodeIIEST.
-The goal of this repository is to build a structured, high quality collection of algorithms across various domains of computer science while helping students learn open-source collaboration.
-
-This repository is beginner friendly and focuses on clean code, clear explanations, and learning by contribution.
-
+This repository is designed to help contributors strengthen problem-solving skills, write clean and maintainable code, and gain real-world experience with open-source collaboration.
 
 ---
 
-🎯 Objectives
+## Table of Contents
 
-Build a comprehensive algorithm resource
-
-Encourage students to contribute to open source
-
-Improve problem-solving and coding practices
-
-Learn Git, GitHub workflow, and collaboration
-
-
+1. [Features](#features)
+2. [Repository Structure](#repository-structure)
+3. [Roadmap](#roadmap)
+4. [Contributing](#contributing)
+5. [License](#license)
 
 ---
 
-📂 Repository Structure
+## Features
 
+- **Wide Algorithm Coverage**: Algorithms across core computer science domains
+- **Beginner-Friendly**: Clear explanations and readable implementations
+- **Mentored Contributions**: Pull requests are reviewed with guidance and feedback
+- **Multiple Languages**: Contributions encouraged in **C++**, **Java**, and **Python**
+- **Quality Focused**: Emphasis on documentation and time/space complexity
+
+---
+
+## Repository Structure
+
+```
 AlgoForge/
+├── Arrays/
+├── Strings/
+├── Sorting/
+├── Searching/
+├── Recursion/
+├── Dynamic_Programming/
+├── Greedy/
+├── Graphs/
+├── Trees/
+├── Mathematics/
+└── README.md
+```
 
-Will be Updated soon.
-
+- Each folder contains topic-specific algorithms
+- Multiple language implementations are welcome
+- Every algorithm should include a brief explanation and complexity analysis
 
 ---
 
-✅ How to Contribute
+## Roadmap
 
+The **Roadmap.md** file tracks planned and completed algorithms for the repository.  
+Contributors are encouraged to check the roadmap before starting work.
+
+- Refer to [Roadmap.md](Roadmap.md) to see available tasks
+- Update the checklist once your contribution is merged
+
+---
+
+## Contributing
+
+We welcome contributions from all skill levels.
+
+To contribute:
 1. Fork the repository
-
-
 2. Create a new branch
+3. Add your algorithm in the appropriate folder
+4. Include:
+   - Clean and readable code
+   - A short explanation
+   - Time and space complexity
+5. Submit a Pull Request
 
-
-3. Add an algorithm in the appropriate folder
-
-Include clear code
-
-Add comments / explanation
-
-Mention time and space complexity
-
-
-
-4. Commit your changes
-
-
-5. Open a Pull Request
-
-
-
-Mentors will review PRs and provide feedback.
-
+Please read the detailed guidelines in the [CONTRIBUTING.md](CONTRIBUTING.md) file before submitting your PR.
 
 ---
 
-📜 Contribution Guidelines
+## License
 
-Code should be readable and properly formatted
-
-Avoid duplicate algorithms
-
-Add a brief explanation at the top of the file
-
-Follow the folder naming conventions
-
-
+This repository is licensed under the **MIT License**.  
+See the [LICENSE](LICENSE) file for more details.
 
 ---
 
-🧑‍🏫 Mentorship
-
-This repository is mentored as part of Winter of Open Source.
-Contributors will receive guidance on:
-
-Algorithmic thinking
-
-Code quality
-
-GitHub best practices
-
-
-
----
-
-📄 License
-
-This repository is licensed under the MIT License.
-You are free to use, modify, and distribute the code.
-
-
----
-
-⭐ Get Started
-
-If you’re new to open source, this is a great place to begin.
-Star ⭐ the repository and start contributing!
-
-
----
+Thank you for contributing to **AlgoForge**.  
+Learn, build, and grow together through open source!
