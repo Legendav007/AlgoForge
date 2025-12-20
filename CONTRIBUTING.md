@@ -1,7 +1,7 @@
 # Contribution Guidelines
 
-Welcome to **AlgoForge**!
-AlgoForge is a mentored open-source repository created as part of the **Winter of Open Source** initiative. The goal of this project is to build a high-quality collection of frequently used **algorithms and data structures** while helping contributors learn clean coding practices and open-source collaboration.
+Welcome to **AlgoForge**!  
+AlgoForge is a mentored open-source repository created as part of the **Winter of Open Source** initiative. The goal of this project is to build a high-quality collection of **algorithms and data structures**, with a strong emphasis on explanation, analysis, and understanding—not just raw code.
 
 We encourage contributions from all skill levels.
 
@@ -15,7 +15,7 @@ We encourage contributions from all skill levels.
 2. Clone your forked repository to your local machine:
 
 ```bash
-git clone https://github.com/your-username/AlgoForge.git
+git clone https://github.com/Legendav007/AlgoForge.git
 ```
 
 ---
@@ -23,110 +23,133 @@ git clone https://github.com/your-username/AlgoForge.git
 ### Step 2: Choose an Algorithm
 
 1. Browse the existing folders and check whether the algorithm you want to add already exists.
-2. If it exists, add your implementation to the **same category folder**.
-3. If it does not exist, you may create a new folder with an appropriate name.
-4. Create an **Issue** describing the algorithm you want to add and wait until it is assigned.
+2. If it exists, **do not duplicate it**. You may improve documentation or add missing explanations.
+3. If it does not exist, create a new folder under the appropriate category.
+4. Create an **Issue** describing the algorithm you want to work on and wait until it is assigned.
 
 ---
 
-### Step 3: Language Requirements
+## Contribution Format (Mandatory)
 
-Contributions are encouraged in the following languages:
+⚠️ **Each algorithm must be contributed as a single Markdown (`.md`) file.**
 
-* **C++**
-* **Java**
-* **Python**
-
-Guidelines:
-
-* You may contribute in one or more languages
-* Code must be correct, efficient, and readable
-* Follow standard coding practices for the chosen language
+- No standalone `.cpp`, `.java`, or `.py` files  
+- Explanation, analysis, and code must all be inside **one `.md` file**  
+- Pull Requests not following this format will **not be merged**
 
 ---
 
-### Step 4: Code Structure
+## Required Folder Structure
 
-For each algorithm, the folder may contain:
+```
+Category_Name/
+└── algorithm_name.md
+```
 
-1. `algorithm_name.cpp`
-2. `algorithm_name.java`
-3. `algorithm_name.py`
-4. `README.md` (optional but recommended)
+Example:
+```
+Searching/
+└── binary_search.md
+```
 
-   * Brief explanation of the algorithm
-   * Time and space complexity
+---
 
-Each file should:
+## Mandatory `algorithm_name.md` Structure
 
-* Contain a clear implementation of the algorithm
-* Include a small demonstration or example usage (where applicable)
+Each algorithm Markdown file **must include all of the following sections**:
 
-#### Example Structure
+- **Algorithm Name**
+- **Problem Statement**
+- **Approach / Intuition**
+- **Step-by-Step Explanation**
+- **Code Implementation**
+- **Time Complexity**
+- **Space Complexity**
 
+---
+
+## Example Algorithm File (Binary Search)
+
+Below is an example of how a complete algorithm file should look.
+
+```md
+# Binary Search
+
+## Problem Statement
+Given a sorted array and a target element, determine whether the target exists in the array.
+
+## Approach / Intuition
+Binary Search works by repeatedly dividing the search space in half.  
+At each step, the middle element is compared with the target to decide which half to search next.
+
+## Step-by-Step Explanation
+1. Initialize two pointers: `low` and `high`
+2. Compute the middle index
+3. Compare the middle element with the target
+4. Reduce the search space accordingly
+5. Repeat until the element is found or the range becomes invalid
+
+## Code Implementation
+
+### C++
 ```cpp
-// C++ Example
-#include <iostream>
-using namespace std;
-
-void algorithm() {
-    // algorithm logic
-}
-
-int main() {
-    algorithm();
-    return 0;
+int binarySearch(vector<int>& arr, int target) {
+    int low = 0, high = arr.size() - 1;
+    while (low <= high) {
+        int mid = low + (high - low) / 2;
+        if (arr[mid] == target) return mid;
+        else if (arr[mid] < target) low = mid + 1;
+        else high = mid - 1;
+    }
+    return -1;
 }
 ```
 
-```java
-// Java Example
-class Main {
-    static void algorithm() {
-        // algorithm logic
-    }
-
-    public static void main(String[] args) {
-        algorithm();
-    }
-}
-```
-
+### Python
 ```python
-# Python Example
-def algorithm():
-    # algorithm logic
-    pass
+def binary_search(arr, target):
+    low, high = 0, len(arr) - 1
+    while low <= high:
+        mid = (low + high) // 2
+        if arr[mid] == target:
+            return mid
+        elif arr[mid] < target:
+            low = mid + 1
+        else:
+            high = mid - 1
+    return -1
+```
+## Time Complexity
+O(log n)
 
-if __name__ == "__main__":
-    algorithm()
+## Space Complexity
+O(1)
 ```
 
 ---
 
-### Step 5: Update Roadmap.md
+## Step 3: Update Roadmap.md
 
-After creating your Pull Request:
+After your Pull Request is merged:
 
-* Check the corresponding algorithm in **Roadmap.md**
-* If no relevant item exists, add a new checkbox under the appropriate section
-* Add a **hyperlink** to the folder containing your implementation
+- Check the corresponding algorithm in **Roadmap.md**
+- If the algorithm is not listed, add a new checkbox under the appropriate section
+- Add a **hyperlink** pointing to your algorithm folder or `.md` file
 
-> Note: The checklist should be updated **after your PR is merged**.
+> Do not update the roadmap before your PR is merged.
 
 ---
 
-### Step 6: Submit a Pull Request
+## Step 4: Submit a Pull Request
 
 1. Push your changes to your forked repository
 2. Open a Pull Request to the `main` branch
 
 Ensure that:
-
-* The PR description clearly explains the contribution
-* Code follows proper naming conventions
-* Files are placed in the correct folders
-* Roadmap is updated correctly
+- The algorithm is documented in a **single `.md` file**
+- All mandatory sections are present
+- Folder naming follows repository conventions
+- Roadmap is updated correctly
 
 Mentors will review your PR and may request changes before merging.
 
@@ -134,12 +157,12 @@ Mentors will review your PR and may request changes before merging.
 
 ## Important Notes
 
-* Avoid duplicate algorithms
-* Write clean, readable code with meaningful variable names
-* Add comments where necessary
-* Be respectful and open to feedback
+- ❌ PRs without explanation or analysis will be rejected  
+- ❌ PRs containing only raw code will be rejected  
+- ❌ PRs not following the `.md` format will be rejected  
+- Write clean, readable code
 
 ---
 
-Thank you for contributing to **AlgoForge**.
-Learn, build, and grow together through open source!
+Thank you for contributing to **AlgoForge**.  
+Learn the algorithm. Explain it. Analyze it. Then code it.
