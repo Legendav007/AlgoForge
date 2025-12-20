@@ -1,7 +1,7 @@
 # Contribution Guidelines
 
 Welcome to **AlgoForge**!  
-AlgoForge is a mentored open-source repository created as part of the **Winter of Open Source** initiative. The goal of this project is to build a high-quality collection of **algorithms and data structures**, with a strong emphasis on explanation, analysis, and understanding—not just raw code.
+AlgoForge is a mentored open-source repository created as part of the **Winter of Open Source** initiative. The goal of this project is to build a high-quality collection of frequently used **algorithms and data structures** while helping contributors learn clean coding practices and open-source collaboration.
 
 We encourage contributions from all skill levels.
 
@@ -23,7 +23,7 @@ git clone https://github.com/Legendav007/AlgoForge.git
 ### Step 2: Choose an Algorithm
 
 1. Browse the existing folders and check whether the algorithm you want to add already exists.
-2. If it exists, **do not duplicate it**. You may improve documentation or add missing explanations.
+2. If it exists, do **not duplicate** it. You may improve documentation or add missing explanations.
 3. If it does not exist, create a new folder under the appropriate category.
 4. Create an **Issue** describing the algorithm you want to work on and wait until it is assigned.
 
@@ -39,24 +39,11 @@ git clone https://github.com/Legendav007/AlgoForge.git
 
 ---
 
-## Required Folder Structure
-
-```
-Category_Name/
-└── algorithm_name.md
-```
-
-Example:
-```
-Searching/
-└── binary_search.md
-```
-
----
-
 ## Mandatory `algorithm_name.md` Structure
 
-Each algorithm Markdown file **must include all of the following sections**:
+**All algorithm submissions must follow the structure defined in `algorithm_template.md`.**
+
+Each algorithm Markdown file must include the following sections:
 
 - **Algorithm Name**
 - **Problem Statement**
@@ -68,67 +55,7 @@ Each algorithm Markdown file **must include all of the following sections**:
 
 ---
 
-## Example Algorithm File (Binary Search)
-
-Below is an example of how a complete algorithm file should look.
-
-```md
-# Binary Search
-
-## Problem Statement
-Given a sorted array and a target element, determine whether the target exists in the array.
-
-## Approach / Intuition
-Binary Search works by repeatedly dividing the search space in half.  
-At each step, the middle element is compared with the target to decide which half to search next.
-
-## Step-by-Step Explanation
-1. Initialize two pointers: `low` and `high`
-2. Compute the middle index
-3. Compare the middle element with the target
-4. Reduce the search space accordingly
-5. Repeat until the element is found or the range becomes invalid
-
-## Code Implementation
-
-### C++
-```cpp
-int binarySearch(vector<int>& arr, int target) {
-    int low = 0, high = arr.size() - 1;
-    while (low <= high) {
-        int mid = low + (high - low) / 2;
-        if (arr[mid] == target) return mid;
-        else if (arr[mid] < target) low = mid + 1;
-        else high = mid - 1;
-    }
-    return -1;
-}
-```
-
-### Python
-```python
-def binary_search(arr, target):
-    low, high = 0, len(arr) - 1
-    while low <= high:
-        mid = (low + high) // 2
-        if arr[mid] == target:
-            return mid
-        elif arr[mid] < target:
-            low = mid + 1
-        else:
-            high = mid - 1
-    return -1
-```
-## Time Complexity
-O(log n)
-
-## Space Complexity
-O(1)
-```
-
----
-
-## Step 3: Update Roadmap.md
+### Step 3: Update Roadmap.md
 
 After your Pull Request is merged:
 
@@ -140,7 +67,7 @@ After your Pull Request is merged:
 
 ---
 
-## Step 4: Submit a Pull Request
+### Step 4: Submit a Pull Request
 
 1. Push your changes to your forked repository
 2. Open a Pull Request to the `main` branch
@@ -160,7 +87,8 @@ Mentors will review your PR and may request changes before merging.
 - ❌ PRs without explanation or analysis will be rejected  
 - ❌ PRs containing only raw code will be rejected  
 - ❌ PRs not following the `.md` format will be rejected  
-- Write clean, readable code
+- Write clean, readable code  
+- Be respectful and open to feedback  
 
 ---
 
