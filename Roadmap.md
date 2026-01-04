@@ -80,6 +80,7 @@ If you feel any algorithm is missing and need to be add you can put it here.
 - ⬜ Activity Selection
 - ⬜ Fractional Knapsack
 - ⬜ Huffman Coding
+- ✅ Kadane's Algorithm
 
 ---
 
