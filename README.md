@@ -65,6 +65,7 @@ Contributors are encouraged to check the roadmap before starting work.
 We welcome contributions from all skill levels.
 
 To contribute:
+
 1. Fork the repository
 2. Create a new branch
 3. Add your algorithm in the appropriate folder

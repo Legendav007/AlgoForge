@@ -5,7 +5,7 @@ It helps contributors identify what has already been implemented and what is sti
 
 Please check this file before starting a contribution to avoid duplication.
 
-If you feel any algorithm is missing and need to be add you can put it here.
+If you feel any algorithm is missing and need to be add you can put it here
 ---
 
 ## 📌 How to Use This Roadmap
@@ -43,7 +43,7 @@ If you feel any algorithm is missing and need to be add you can put it here.
 - ⬜ Selection Sort
 - ⬜ Insertion Sort
 - ⬜ Merge Sort
-- ⬜ Quick Sort
+- ✅ Quick Sort
 - ⬜ Heap Sort
 
 ---
